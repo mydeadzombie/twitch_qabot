@@ -1,0 +1,28 @@
+extends ./layout.jade
+	
+block content
+		style.
+			body { padding-top: 40px;padding-bottom: 40px;background-color: #eee; }
+			.form-signin { max-width: 330px;padding: 15px;margin: 0 auto; }
+			.form-signin .form-signin-heading { margin-bottom: 10px; }
+			.form-signin .form-control { position: relative;height: auto;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px;font-size: 16px; }
+			.form-signin .form-control:focus { z-index: 2; }
+
+		.container-fluid
+			form(class="form-signin mdl-card mdl-shadow--2dp",action='/auth',method='POST')
+				div(class=notice_class)=notice_msg
+
+				if !notice_msg
+					.mdl-card__title.mdl-card--expand
+						h2.mdl-card__title-text=h2
+				.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+					input(class="mdl-textfield__input",name="login",type="text",required="",autofocus="",id="inputLogin")
+					label(class="mdl-textfield__label",for="inputLogin")
+						|Login
+				.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+					input(class="mdl-textfield__input",name="password",type="password",required="",id="inputPassword")
+					label(class="mdl-textfield__label",for="inputPassword")
+						|Password
+				.mdl-card__actions.mdl-card--border
+					button(class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect",type="submit")
+						|Sign in

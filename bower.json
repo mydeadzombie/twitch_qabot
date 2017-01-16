@@ -1,0 +1,24 @@
+{
+  "name": "twitch_qabot",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "tsunlife"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "material-design-lite": "^1.1.3",
+    "bootstrap": "^3.3.6"
+  }
+}

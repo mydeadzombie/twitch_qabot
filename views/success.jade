@@ -1,0 +1,26 @@
+extends ./layout.jade
+	
+block content
+		style.
+			.block-success { max-width: 640px;padding: 15pt;margin: 0 auto;margin-top:5%; }
+			.block-success .block-success-heading { margin-bottom: 10pt; }
+
+		.container-fluid
+			.block-success.mdl-shadow--2dp
+				.mdl-card__title.mdl-card--expand
+					h2.mdl-card__title-text=h2
+				
+				.mdl-card__supporting-text
+					.alert.alert-success.text-center
+						strong
+							|Success!
+						|&nbsp;Everything is good.
+
+				.mdl-card__actions.mdl-card--border
+					a.mdl-button.mdl-js-button.mdl-button--primary.mdl-js-ripple-effect(href="/control",title="Main page")
+						| Control&nbsp;
+						i.material-icons|dashboard
+
+					a.mdl-button.mdl-js-button.mdl-button--primary.mdl-js-ripple-effect(href="/constructor",title="Constructor")
+						| Constructor&nbsp;
+						i.material-icons|input
